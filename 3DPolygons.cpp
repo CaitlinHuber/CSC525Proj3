@@ -152,15 +152,22 @@ void left_Leg_one()
 }
 
 	//***********************************************************************************
+bool headchoice1 = true;
+bool headchoice2 = false;
+bool headchoice3 = false;
 void drawPoints()
 {
 	glColor3f(r, g, b);
 
-
-	//-------------
-	head_Three();
-	//-------------
-
+	if (headchoice1){
+		head_One();
+	}
+	else if (headchoice2){
+		head_Two();
+	}
+	else if (headchoice3){
+		head_Three();
+	}
 
 	glBegin(GL_POINTS);	// use points to form X-/Y-axes
 	glColor3f(0, 0, 0);			 // change drawing color to black
@@ -218,7 +225,27 @@ void colorChoice(int option){
 }
 
 void headChoice(int option){
-	
+	switch (option)
+	{
+	case 1:
+		headchoice1 = true;
+		headchoice2 = false;
+		headchoice3 = false;
+		break;
+	case 2:
+		headchoice1 = false;
+		headchoice2 = true;
+		headchoice3 = false;
+		break;
+	case 3:
+		headchoice1 = false;
+		headchoice2 = false;
+		headchoice3 = true;
+		break;
+	default:
+		break;
+	}
+	myDisplayCallback();
 }
 
 void armsChoice(int option){}
@@ -316,6 +343,7 @@ void textEditor(){
 	glutAddSubMenu("Colors", colorMenu);
 	glutAddMenuEntry("Exit the Program", 1);
 	glutAttachMenu(GLUT_RIGHT_BUTTON);
+
 }
 
 //***********************************************************************************
