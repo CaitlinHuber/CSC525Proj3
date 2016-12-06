@@ -148,15 +148,227 @@ void head_Three()
 
 void left_Leg_one()
 {
+	glColor3d(0, 0, 1);
+	glPushMatrix();
+	glTranslated(0, 0, 0);
+	glutSolidCube(20);
+	glPopMatrix();
 
+	glPushMatrix();
+	glTranslated(0, 20, 0);
+	//glTranslated(0 + x, 20 + y, 0 + z);
+	glutSolidCube(20);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslated(0, 40, 0);
+	//glTranslated(0 + x, 40 + y, 0 + z);
+	glutSolidCube(20);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslated(0, 60, 0);
+	//glTranslated(0 + x, 60 + y, 0 + z);
+	glutSolidCube(20);
+	glPopMatrix();
 }
 
+void left_Leg_Two()
+{
+	glColor3d(0, 0, 1);
+	glPushMatrix();
+	glTranslated(0, 60, 0);
+	glutSolidCube(20);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslated(0, 40, 0);
+	glutSolidCube(20);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslated(0, 20, 0);
+	glutSolidCube(20);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslated(0, 0, 0);
+	glutSolidCube(20);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslated(20, 0, 0);
+	glutSolidCube(20);
+	glPopMatrix();
+}
+
+void left_Leg_Three()
+{
+	glPushMatrix();
+	glColor3d(0, 1, 0);
+	glTranslated(0, 70, 0);
+	//glTranslated(0 + x, 70 + y, 0 + z);
+	glutSolidSphere(10, 50, 50);
+	glPopMatrix();
+
+	glPushMatrix();
+	glColor3d(0, 0, 1);
+	glRotated(-90, 1, 0, 0);
+	glTranslated(0, 0, 0);
+	//glTranslated(0 + x, 0 + z, 0 + y);
+	glutSolidCone(10, 70, 50, 50);
+	glPopMatrix();
+
+	glPushMatrix();
+	glColor3d(1, 0, 0);
+	glTranslated(0, 0, 10);
+	//glTranslated(0 + x, 0 + y, 10 + z);
+	glutSolidCone(5, 20, 50, 50);
+	glPopMatrix();
+
+	glPushMatrix();
+	glColor3d(1, 0, 0);
+	glRotated(120, 0, 1, 0);
+	glTranslated(0, 0, 10);
+	//glTranslated(0 + x, 0 + y, 10 + z);
+	glutSolidCone(5, 20, 50, 50);
+	glPopMatrix();
+
+	glPushMatrix();
+	glColor3d(1, 0, 0);
+	glRotated(240, 0, 1, 0);
+	glTranslated(0, 0, 10);
+	//glTranslated(0 + x, 0 + y, 10 + z);
+	glutSolidCone(5, 20, 50, 50);
+	glPopMatrix();
+
+	glTranslated(20, 30, 0);
+}
+
+void left_Arm_One()
+{
+	glColor3d(1, 0, 0);
+
+	glPushMatrix();
+	glTranslated(0, 0, 0);
+	glutSolidSphere(10, 50, 50);
+	glPopMatrix();
+
+	glColor3d(0, 1, 0);
+	glPushMatrix();
+	glTranslated(-20, 0, 0);
+	glutSolidSphere(10, 50, 50);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslated(-40, 0, 0);
+	glutSolidSphere(10, 50, 50);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslated(-60, 0, 0);
+	glutSolidSphere(10, 50, 50);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslated(-80, 0, 0);
+	glutSolidSphere(10, 50, 50);
+	glPopMatrix();
+}
+
+void Left_Arm_Two()
+{
+	glColor3d(1, 0, 0);
+	glPushMatrix();
+	glTranslated(0, 0, 0);
+	glutSolidCube(10);
+	glPopMatrix();
+
+	glColor3d(0, 1, 0);
+	glPushMatrix();
+	glTranslated(-20, 0, 0);
+	glutSolidCube(10);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslated(-40, 0, 0);
+	glutSolidCube(10);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslated(-60, 0, 0);
+	glutSolidCube(10);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslated(-80, 0, 0);
+	glutSolidCube(10);
+	glPopMatrix();
+}
+
+void Left_Arm_Three()
+{
+	glColor3d(1, 0, 0);
+	glPushMatrix();
+	glTranslated(0, 0, 0);
+	glutSolidCube(10);
+	glPopMatrix();
+
+	glColor3d(0, 0, 1);
+	glPushMatrix();
+	glTranslated(-10, 0, 0);
+	glutSolidSphere(5, 50, 50);
+	glPopMatrix();
+
+	glColor3d(0, 1, 0);
+	glPushMatrix();
+	glTranslated(-20, 0, 0);
+	glutSolidCube(10);
+	glPopMatrix();
+
+	glColor3d(0, 0, 1);
+	glPushMatrix();
+	glTranslated(-30, 0, 0);
+	glutSolidSphere(5, 50, 50);
+	glPopMatrix();
+
+	glColor3d(0, 1, 0);
+	glPushMatrix();
+	glTranslated(-40, 0, 0);
+	glutSolidCube(10);
+	glPopMatrix();
+
+	glColor3d(0, 0, 1);
+	glPushMatrix();
+	glTranslated(-50, 0, 0);
+	glutSolidSphere(5, 50, 50);
+	glPopMatrix();
+
+	glColor3d(0, 1, 0);
+	glPushMatrix();
+	glTranslated(-60, 0, 0);
+	glutSolidCube(10);
+	glPopMatrix();
+
+	glColor3d(0, 0, 1);
+	glPushMatrix();
+	glTranslated(-70, 0, 0);
+	glutSolidSphere(5, 50, 50);
+	glPopMatrix();
+
+	glColor3d(0, 1, 0);
+	glPushMatrix();
+	glTranslated(-80, 0, 0);
+	glutSolidCube(10);
+	glPopMatrix();
+}
 	//***********************************************************************************
 bool headchoice1 = false;
 bool headchoice2 = false;
 bool headchoice3 = false;
 void drawPoints()
 {
+	Left_Arm_Three();
 	glColor3f(r, g, b);
 
 	if (headchoice1){
