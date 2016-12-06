@@ -152,7 +152,7 @@ void left_Leg_one()
 }
 
 	//***********************************************************************************
-bool headchoice1 = true;
+bool headchoice1 = false;
 bool headchoice2 = false;
 bool headchoice3 = false;
 void drawPoints()
@@ -225,21 +225,18 @@ void colorChoice(int option){
 }
 
 void headChoice(int option){
+	headchoice1 = false;
+	headchoice2 = false;
+	headchoice3 = false;
 	switch (option)
 	{
 	case 1:
 		headchoice1 = true;
-		headchoice2 = false;
-		headchoice3 = false;
 		break;
 	case 2:
-		headchoice1 = false;
 		headchoice2 = true;
-		headchoice3 = false;
 		break;
 	case 3:
-		headchoice1 = false;
-		headchoice2 = false;
 		headchoice3 = true;
 		break;
 	default:
