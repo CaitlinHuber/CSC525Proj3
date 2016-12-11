@@ -8,6 +8,12 @@
 using namespace std;
 
 //***********************************************************************************
+
+//declaring methods
+//able to use the method before they are constructed
+void myDisplayCallback();
+
+
 //Declaring Variables
 float r = 0;
 float g = 0;
@@ -666,8 +672,6 @@ int angle = 0;
 
 void drawPoints()
 {
-
-	glPopMatrix();
 	glPushMatrix();
 	glRotated(angle, 0, 1, 0);
 
@@ -740,14 +744,29 @@ void drawPoints()
 }
 
 //***********************************************************************************
+
+int delay = 0;
+int angleIncrament = 0;
 void mouseClicked(int button, int state, int x, int y)
 {
-	if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN)
+	
+	while (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN && angleIncrament < 45)
 	{
-		angle = angle + 10;
-		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);	// draw the background
-		drawPoints();
-		glFlush(); // flush out the buffer contents
+		angle = angle + 5;
+		angleIncrament = angleIncrament + 5;
+
+		while (delay < 10000000)
+		{
+			delay = delay + 1;
+		}
+		delay = 0;
+
+		myDisplayCallback();
+	}
+	angleIncrament = 0;
+	if (angle == 360)
+	{
+		angle = 0;
 	}
 
 }
@@ -767,13 +786,11 @@ void test()
 	//------------------------------
 	glutMouseFunc(mouseClicked);
 	//------------------------------
-	//glutMotionFunc(mouseClicked);
-	//glutButtonBoxFunc(mouseClicked);
+	
 }
 
 void myDisplayCallback()
 {
-	test();
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);	// draw the background
 	drawPoints();
 	glFlush(); // flush out the buffer contents
@@ -1182,6 +1199,6 @@ void main(int argc, char** argv)
 
 	glutDisplayFunc(myDisplayCallback);		// register a callback
 	//glutKeyboardFunc(character);
-	//glutMouseFunc(mouseClicked);
+	glutMouseFunc(mouseClicked);
 	glutMainLoop();							// get into an infinite loop
 }
