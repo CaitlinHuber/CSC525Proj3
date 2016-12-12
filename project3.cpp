@@ -73,13 +73,13 @@ float rValLeftLeg = .5;
 float gValLeftLeg = .5;
 float bValLeftLeg = .5;
 
-rm, b
 bool headchoice1, headchoice2, headchoice3;
 bool bodychoice1, bodychoice2, bodychoice3;
 bool leftLegChoice1, leftLegChoice2, leftLegChoice3;
 bool rightLegChoice1, rightLegChoice2, rightLegChoice3;
 bool leftArmChoice1, leftArmChoice2, leftArmChoice3;
 bool rightArmChoice1, rightArmChoice2, rightArmChoice3;
+
 
 string introHelpString = "Welcome to Build - A - Robot Information Window";
 string introHelpString2 = "--------------------------------------------------";
