@@ -49,13 +49,31 @@ float b = 0;
 
 int infoWindow;
 
-float rValHead, gValHead, bValHead = 0;
-float rValBody, gValBody, bValBody = 0;
-float rValRightArm, gValRightArm, bValRightArm = 0;
-float rValLeftArm, gValLeftArm, bValLeftArm = 0;
-float rValRightLeg, gValRightLeg, bValRightLeg = 0;
-float rValLeftLeg, gValLeftLeg, bValLeftLeg = 0;
+float rValHead = .5;
+float gValHead = .5;
+float bValHead = .5;
 
+float rValBody = .5;
+float gValBody = .5;
+float bValBody = .5;
+
+float rValRightArm = .5;
+float gValRightArm = .5;
+float bValRightArm = .5;
+
+float rValLeftArm = .5;
+float gValLeftArm = .5;
+float bValLeftArm = .5;
+
+float rValRightLeg = .5;
+float gValRightLeg = .5;
+float bValRightLeg = .5;
+
+float rValLeftLeg = .5;
+float gValLeftLeg = .5;
+float bValLeftLeg = .5;
+
+rm, b
 bool headchoice1, headchoice2, headchoice3;
 bool bodychoice1, bodychoice2, bodychoice3;
 bool leftLegChoice1, leftLegChoice2, leftLegChoice3;
